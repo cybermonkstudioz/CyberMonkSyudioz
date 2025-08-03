@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Monk Studioz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+<header>
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="#CyberMonkStudioz">Cyber Monk Studioz</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+  </script>
+  
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="monk-container">
+            <img src="CMS NEW LOGO.jpg" alt="Animated Monk" class="monk">
+        </div>
+        <h1>Welcome to Cyber Monk Studioz</h1>
+        <p>Your Creative Partner for Design and Innovation</p>
+        <!-- Removed a href, added button with id for JS -->
+        <button id="exploreBtn">Explore Our Services</button>
+    </section>
+    
+<!-- Services Section -->
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-container">
+        <div class="service">
+            <h3>Graphic Designing</h3>
+        </div>
+        <div class="service">
+            <h3>Video Editing</h3>
+        </div>
+        <div class="service">
+            <h3>Photo Editing</h3>
+        </div>
+        <div class="service">
+            <h3>Website Designing</h3>
+        </div>
+        <div class="service">
+            <h3>App Designing</h3>
+        </div>
+        <div class="service">
+            <h3>Photography / Videography</h3>
+        </div>
+    </div>
+</section>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- Team Section -->
+<section id="team" class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="Hari.jpg" alt="Srihariharan G">
+            <h3>Srihariharan</h3>
+        </div>
+        <div class="team-member">
+            <img src="aaruhya.jpg" alt="Aaruhya Kumar">
+            <h3>Aaruhya Kumar</h3>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Booking Section -->
+<section id="booking" class="booking">
+    <h2>Book Our Services</h2>
+    <form action="https://formspree.io/f/xnnjzjey" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="service">Select a Service:</label>
+        <select id="service" name="service" required>
+            <option value="None" selected>None</option>
+            <option value="Graphic Designing">Graphic Designing</option>
+            <option value="Video Editing">Video Editing</option>
+            <option value="Photo Editing">Photo Editing</option>
+            <option value="Website Designing">Website Designing</option>
+            <option value="App Designing">App Designing</option>
+            <option value="Photography">Photography</option>
+            <option value="Videography">Videography</option>
+        </select>
+
+        <label for="message">Requirements:</label>
+        <textarea id="message" name="message" placeholder="Your Message Here" rows="4"></textarea>
+
+        <button type="submit">Book Service</button>
+    </form>
+</section>
+
+<!-- Divider -->
+<hr class="section-divider">
+     
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="chatbot">
+            <button onclick="openChat()">Chat with us</button>
+        </div>
+    </section>
+
+    <!-- WhatsApp Chat Button -->
+    <div style="display: flex; justify-content: center; align-items: center; position: fixed; bottom: 20px; right: 20px;">
+        <a href="https://wa.me/6374316014" target="_blank" style="text-decoration: none;">
+            <div style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #25D366;
+                color: rgb(255, 255, 255);
+                padding: 10px 10px;
+                border-radius: 15px;
+                font-size: 16px;
+                cursor: pointer;
+                width: fit-content;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+                    alt="WhatsApp" 
+                    style="width: 20px; height: 22px; margin-right: 10px;">
+                Chat with Us on WhatsApp
+            </div>
+        </a>
+    </div>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot-window">
+        <div class="chatbot-header">
+            <span>Cyber Monk Chatbot</span>
+            <button onclick="closeChat()">X</button>
+        </div>
+        <div class="chatbot-content">
+            <p>Hi! How can I help you today?</p>
+        </div>
+        <input type="text" placeholder="Type your message..." id="userMessage">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cyber Monk Studioz. All rights reserved.</p>
+    </footer>
+</body>
+</html>
